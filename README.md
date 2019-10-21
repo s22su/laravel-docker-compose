@@ -8,7 +8,7 @@ This starter pack is also suitable for any other PHP project/framework.
 * nginx
 * PHP 7.3
 * Composer
-* PostgreSQL 11
+* PostgreSQL 12
 * Laravel starter code
 
 # Getting started
