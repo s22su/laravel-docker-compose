@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $time_sql = DB::select('select NOW() as current_time');
+    $current_db_time = current($time_sql)->current_time;
+
+    $dt = new DateTime($current_db_time);
+
+    return view('welcome')->with(['current_time' => $dt->format('c')]);
 });
 
 Auth::routes();
